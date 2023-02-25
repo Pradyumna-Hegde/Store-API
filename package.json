@@ -1,0 +1,27 @@
+{
+  "name": "store-api",
+  "version": "1.0.0",
+  "description": "Initial Commit",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pradyumna-Hegde/Store-API.git"
+  },
+  "author": "Pradyumna-Hegde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pradyumna-Hegde/Store-API/issues"
+  },
+  "homepage": "https://github.com/Pradyumna-Hegde/Store-API#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "mongoose": "^6.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
