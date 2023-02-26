@@ -1,8 +1,10 @@
 import express from "express";
 import connect from "./db/connect.js";
-import "dotenv/config";
 import errorHandlerMiddleware from "./middlewares/error-handler.js";
 import notFound from "./middlewares/not-found.js";
+import productsRouter from "./routes/products.js";
+import "dotenv/config";
+import "express-async-errors";
 
 const port = process.env.PORT || 6000;
 const uri = process.env.URI;
@@ -16,13 +18,14 @@ app.get("/", (req, res) => {
   );
 });
 
+app.use("/api/v1/products", productsRouter);
+
 // middlewares.
 app.use(errorHandlerMiddleware);
 app.use(notFound);
 
 const start = async () => {
   try {
-    // connect()
     await connect(uri);
     app.listen(port, () =>
       console.log(
