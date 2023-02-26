@@ -1,5 +1,8 @@
+import Product from "../models/productsModel.js";
+
 const getAllProductsStatic = async (req, res) => {
-  res.status(200).json({ msg: "Products testing route" });
+  const products = await Product.find({ name: "dining table" });
+  res.status(200).json({ products, nbHits: products.length });
 };
 
 const getAllProducts = async (req, res) => {

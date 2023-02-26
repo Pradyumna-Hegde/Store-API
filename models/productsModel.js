@@ -10,7 +10,7 @@ const ProductSchema = new mongoose.Schema({
     required: [true, "Product price must be provided"],
   },
   featured: {
-    type: boolean,
+    type: Boolean,
     default: false,
   },
   rating: {
@@ -30,4 +30,4 @@ const ProductSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model("Product", ProductSchema);
+export default mongoose.model("Products", ProductSchema);

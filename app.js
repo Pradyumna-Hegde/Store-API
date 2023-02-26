@@ -2,7 +2,7 @@ import express from "express";
 import connect from "./db/connect.js";
 import errorHandlerMiddleware from "./middlewares/error-handler.js";
 import notFound from "./middlewares/not-found.js";
-import productsRouter from "./routes/products.js";
+import productsRouter from "./routes/productsRoute.js";
 import "dotenv/config";
 import "express-async-errors";
 

@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 function connect(uri) {
   mongoose.set("strictQuery", true);
